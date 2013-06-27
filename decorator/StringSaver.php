@@ -1,9 +1,5 @@
 <?php
 
-/*  define 'StringSaver' class (this base class will be decorated
-  later on)
- */
-
 class StringSaver {
 
     private $path;
@@ -37,8 +33,10 @@ class StringDecorator {
     protected $stringSaver;
     public $str;
 
-    // Pass StringSaver object to the constructor
-
+    /**
+     * Pass StringSaver object to the constructor 
+     * @param StringSaver $stringSaver
+     */
     public function __construct(StringSaver $stringSaver) {
         $this->stringSaver = $stringSaver;
         $this->resetString();
