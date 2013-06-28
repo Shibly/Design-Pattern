@@ -73,8 +73,8 @@ writeln('BEGIN TESTING ABSTRACT FACTORY PATTERN');
 writeln('');
 writeln('TESTING SAMSUNG FACTORY');
 writeln('');
-$androidPhoneInstance = new SamsungFactory();
-testConcreteFactory($androidPhoneInstance);
+$mobilePhoneInstance = new SamsungFactory();
+testConcreteFactory($mobilePhoneInstance);
 writeln('');
 
 function testConcreteFactory($mobileFactoryInstance) {
