@@ -5,13 +5,18 @@ After implementing various sorting algorithms in PHP , I've planned to implement
 
 **Decorator Pattern**
 
-A `decorator` class allows you to add more capacity to an existing class while leaving the original class untouched. It has certain advantages over inheritance.
+> A decorator class allows you to add more capacity to an existing class while leaving the original class untouched. It has certain advantages over inheritance.
 
 The `Decorator pattern` is also the best way to implement Open Close principle. Which is one of the most important design principle to architect large scale application.
 
 
 For more detail about `decorator pattern` check this [http://en.wikipedia.org/wiki/Decorator_pattern](http://en.wikipedia.org/wiki/Decorator_pattern "Decorator Pattern")
 
+
+**Factory Pattern**
+
+
+In `Factory pattern` a class creates an object that you want to use.
 
 **Abstract Factory Pattern**
 
@@ -23,3 +28,5 @@ The concrete factory must create the correct objects for it's context, insuring 
 In a simple sense, The `Abstract Factory` requires all sub-classes(you can treat the sub classes are an individual concrete factory) to implement their own version of the factory methods. 
 
 For more details about `abstract factory pattern` check the wikipedia reference at [http://en.wikipedia.org/wiki/Abstract_factory_pattern](http://en.wikipedia.org/wiki/Abstract_factory_pattern "Abstract Factory Pattern")
+
+
