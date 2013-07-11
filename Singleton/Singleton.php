@@ -20,13 +20,17 @@ class Database extends PDO implements Singleton {
         return self::$instance;
     }
 
+    public function __clone() {
+        die(__CLASS__ . "Class can't be instantiated. Please use the method called getInstance");
+    }
+
 }
 
 // Usages
 
 
 $db1 = Database::getInstance();
-
+$db1->prepare("Select * from table");
 // $db2 is the same instance of $db1
 $db2 = Database::getInstance();
 ?>
