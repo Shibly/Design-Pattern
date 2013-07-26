@@ -45,9 +45,9 @@ class NoDiscountStrategy implements IStrategy
 
 class ShoppingMall
 {
-    public $customerName;
-    public $billAmount;
-    public $currentStrategy;
+    protected $customerName;
+    protected $billAmount;
+    protected $currentStrategy;
 
     public function setCustomerName($customerName)
     {
@@ -80,6 +80,17 @@ class ShoppingMall
         return $this->currentStrategy->getFinalBill($this->billAmount);
     }
 }
+
+
+// Final example code
+
+// Today is Monday
+
+$objShoppingMall = new ShoppingMall(new LowDiscountStrategy());
+$objShoppingMall->setCustomerName("Monday Customer");
+$objShoppingMall->setBillAmount(1000);
+echo "Final Bill : " . $objShoppingMall->getFinalBill(); // 10% discount
+
 
 
 
