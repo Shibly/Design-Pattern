@@ -92,5 +92,14 @@ $objShoppingMall->setBillAmount(1000);
 echo "Final Bill : " . $objShoppingMall->getFinalBill(); // 10% discount
 
 
+// Today is Thursday
+
+$objShoppingMall = new ShoppingMall(new HighDiscountStrategy());
+$objShoppingMall->setCustomerName("Thursday Customer");
+$objShoppingMall->setBillAmount(1000);
+echo "Final Bill : " . $objShoppingMall->getFinalBill(); // 50% Discount
+
+
+
 
 
