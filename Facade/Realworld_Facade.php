@@ -45,7 +45,7 @@ class Credit
 
 class Bank
 {
-    Public function HasSufficientSavings(Customer $c, $amount)
+    Public function HasSufficientSavings(Customer $c)
     {
         echo " Check bank for " . $c->name() . "<br/>";
         return true;
@@ -68,7 +68,7 @@ class Mortgage
 
         echo $customer->name() . " Applied for loan " . $amount . "<br/>" . "<br/>";
 
-        if (!$this->bank->HasSufficientSavings($customer, $amount)) {
+        if (!$this->bank->HasSufficientSavings($customer)) {
             $this->eligible = False;
         } else if (!$this->loan->HasNoBadLoans($customer)) {
             $this->eligible = False;
