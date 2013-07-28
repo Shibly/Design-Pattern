@@ -26,6 +26,11 @@ class Customer
 
 class Loan
 {
+
+    /**
+     * @param Customer $c
+     * @return bool
+     */
     public function HasNoBadLoans(Customer $c)
     {
         echo "Check loans for " . $c->name() . "<br/>";
@@ -36,6 +41,10 @@ class Loan
 
 class Credit
 {
+    /**
+     * @param Customer $c
+     * @return bool
+     */
     public function HasGoodCredit(Customer $c)
     {
         echo "Check credit for " . $c->name() . "<br/>";
@@ -45,6 +54,10 @@ class Credit
 
 class Bank
 {
+    /**
+     * @param Customer $c
+     * @return bool
+     */
     Public function HasSufficientSavings(Customer $c)
     {
         echo " Check bank for " . $c->name() . "<br/>";
@@ -60,6 +73,10 @@ class Mortgage
     private $credit;
     var $eligible = True;
 
+    /**
+     * @param Customer $customer
+     * @param $amount
+     */
     public function IsEligible(Customer $customer, $amount)
     {
         $this->bank = new Bank();
