@@ -17,7 +17,7 @@ class Customer
         $this->name = $name;
     }
 
-    public function name()
+    public function getName()
     {
         return $this->name;
     }
@@ -33,7 +33,7 @@ class Loan
      */
     public function HasNoBadLoans(Customer $c)
     {
-        echo "Check loans for " . $c->name() . "<br/>";
+        echo "Check loans for " . $c->getName() . "<br/>";
         return true;
     }
 }
@@ -47,7 +47,7 @@ class Credit
      */
     public function HasGoodCredit(Customer $c)
     {
-        echo "Check credit for " . $c->name() . "<br/>";
+        echo "Check credit for " . $c->getName() . "<br/>";
         return true;
     }
 }
@@ -60,7 +60,7 @@ class Bank
      */
     Public function HasSufficientSavings(Customer $c)
     {
-        echo " Check bank for " . $c->name() . "<br/>";
+        echo " Check bank for " . $c->getName() . "<br/>";
         return true;
     }
 }
@@ -83,7 +83,7 @@ class Mortgage
         $this->loan = new Loan();
         $this->credit = new Credit();
 
-        echo $customer->name() . " Applied for loan " . $amount . "<br/>" . "<br/>";
+        echo $customer->getName() . " Applied for loan " . $amount . "<br/>" . "<br/>";
 
         if (!$this->bank->HasSufficientSavings($customer)) {
             $this->eligible = False;
@@ -102,4 +102,4 @@ $mortgage = new Mortgage();
 $customer = new Customer("Shibly");
 $eligible = $mortgage->IsEligible($customer, 125000);
 
-echo "<br/>" . $customer->name() . " has been " . ($mortgage->eligible ? "Approved" : "Rejected");
+echo "<br/>" . $customer->getName() . " has been " . ($mortgage->eligible ? "Approved" : "Rejected");
